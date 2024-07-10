@@ -12,6 +12,9 @@ public class Car {
     // Year of manufacture
     private int year;
     
+    // Vehicle Identification Number
+    private String vin;
+    
     // Price of the car
     private double price;
     
@@ -23,15 +26,17 @@ public class Car {
         this.make = "";
         this.model = "";
         this.year = 0;
+        this.vin = "";
         this.price = 0.0;
         this.carOwner = null;
     }
 
     // Constructor with parameters to initialize the instance variables
-    public Car(String make, String model, int year, double price, CarOwner owner) {
+    public Car(String make, String model, int year, String vin, double price, CarOwner owner) {
         this.make = make;
         this.model = model;
         this.year = year;
+        this.vin = vin;
         this.price = price;
         this.carOwner = owner;
     }
@@ -60,6 +65,14 @@ public class Car {
     public void setYear(int year) {
         this.year = year;
     }
+    
+    public String getVin() {
+    	return vin;
+    }
+    
+    public void setVin(String vin) {
+    	this.vin = vin; 
+    }
 
     public double getPrice() {
         return price;
@@ -86,6 +99,7 @@ public class Car {
         output += "Make: " + this.make + "\n";
         output += "Model: " + this.model + "\n";
         output += "Year: " + this.year + "\n";
+        output += "Vin: " + this.vin + "\n";
         output += "Price: $" + this.price + "\n";
         output += "Owner Information:\n" + this.carOwner;
         output += "\n----------------------------------";
