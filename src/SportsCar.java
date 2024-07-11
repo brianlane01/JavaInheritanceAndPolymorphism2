@@ -179,6 +179,8 @@ public class SportsCar extends Car{
     @Override
     public String toString() {
         String output = super.toString();
+        output += "\nSports Stats for the " + super.getMake();
+        output += "\n----------------------------------";
         output += "\nRace Stats: " + this.raceStat;
         output += "\nTop Speed: " + this.topSpeed + " mph";
         output += "\nAcceleration: " + this.timeToSixty + " 0-60 mph seconds";

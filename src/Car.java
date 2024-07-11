@@ -33,10 +33,10 @@ public class Car {
 
     // Constructor with parameters to initialize the instance variables
     public Car(String make, String model, int year, String vin, double price, CarOwner owner) {
-        this.make = make;
+        this.make = make.toUpperCase();
         this.model = model;
         this.year = year;
-        this.vin = vin;
+        this.vin = vin.toUpperCase();
         this.price = price;
         this.carOwner = owner;
     }
@@ -47,7 +47,7 @@ public class Car {
     }
 
     public void setMake(String make) {
-        this.make = make;
+        this.make = make.toUpperCase();
     }
 
     public String getModel() {
@@ -71,7 +71,7 @@ public class Car {
     }
     
     public void setVin(String vin) {
-    	this.vin = vin; 
+    	this.vin = vin.toUpperCase(); 
     }
 
     public double getPrice() {

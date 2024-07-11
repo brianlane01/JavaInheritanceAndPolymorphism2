@@ -13,7 +13,7 @@ public class CarOwner {
 
     // Constructor with parameters
     public CarOwner(String name, String address) {
-        this.name = name;
+        this.name = name.toUpperCase();
         this.address = address;
     }
 
@@ -23,7 +23,7 @@ public class CarOwner {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name.toUpperCase();
     }
 
     public String getAddress() {
